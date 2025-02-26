@@ -1,0 +1,286 @@
+.product-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-family: 'Inter', sans-serif;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(20px); /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.product-image {
+    flex: 1 1 400px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.product-info #productAuthor {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.7); /* Light text */
+    font-style: italic;
+}
+
+.product-info .price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #4caf50; /* Green price */
+    margin-bottom: 20px;
+}
+
+.product-info .description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7); /* Light text */
+    margin-bottom: 20px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quantity button {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.quantity button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
+}
+
+.quantity span {
+    font-size: 1.2em;
+    margin: 0 15px;
+    color: white;
+}
+
+.add-to-cart {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
+}
+
+.return-to-products {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.return-to-products:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
+}
+
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product-image {
+        max-width: 100%;
+    }
+}
+/* product-details.css (updated) */
+
+.product-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-family: 'Inter', sans-serif;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(20px); /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: relative;
+    z-index: 2; /* Ensure content is above the background */
+}
+
+.product-image {
+    flex: 1 1 400px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.product-info #productAuthor {
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.7); /* Light text */
+    font-style: italic;
+}
+
+.product-info .price {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #4caf50; /* Green price */
+    margin-bottom: 20px;
+}
+
+.product-info .description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7); /* Light text */
+    margin-bottom: 20px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quantity button {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.quantity button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
+}
+
+.quantity span {
+    font-size: 1.2em;
+    margin: 0 15px;
+    color: white;
+}
+
+.add-to-cart {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
+}
+
+.return-to-products {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.return-to-products:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
+}
+
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product-image {
+        max-width: 100%;
+    }
+}

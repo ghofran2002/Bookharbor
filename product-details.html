@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details - BOOKHARBOR</title>
+    <link rel="stylesheet" href="product-details.css">
+</head>
+<body>
+    <div class="animated-background">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+    <div class="product-details" id="productDetails">
+        <!-- Product Image Section -->
+        <div class="product-image">
+            <img id="productImage" src="/placeholder.svg" alt="Book Cover">
+        </div>
+
+        <!-- Product Information Section -->
+        <div class="product-info">
+            <h2 id="productName"></h2>
+            <p id="productAuthor"></p> <!-- Added author field -->
+            <p class="price" id="productPrice"></p>
+            <p class="description" id="productDescription"></p>
+
+            <!-- Quantity Controls -->
+            <div class="quantity">
+                <button id="decreaseQuantity">-</button>
+                <span id="quantity">1</span>
+                <button id="increaseQuantity">+</button>
+            </div>
+
+            <!-- Action Buttons -->
+            <button class="add-to-cart" id="addToCart">Add to Cart</button>
+            <button class="return-to-products" id="returnToProducts">Return to Books</button>
+        </div>
+    </div>
+
+    <script src="product-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+/* Add this to home.css */
+
+/* Global Styles */
+body {
+    background: #0a0a0a; /* Dark background */
+    color: white; /* White text */
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.home-container {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2; /* Ensure content is above the background */
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 90vh;
+    background-image: url('https://media.npr.org/assets/img/2023/12/29/gettyimages-925364372-edit_custom-15f489a3ffaa6163f026535ac4705763d4ccb977.jpg?s=1100&c=50&f=jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Gradient overlay for better text readability */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.8));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    animation: slideIn 1.5s ease;
+}
+
+.hero-content p {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    animation: fadeIn 2s ease;
+}
+
+/* CTA Button */
+.cta-btn {
+    background-color: #6a0dad;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #8e44ad;
+}
+
+/* Categories Section */
+.categories-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.categories-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.category {
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+/* Add this to home.css */
+@media (max-width: 768px) {
+    .category img {
+        height: 150px; /* Smaller height for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .category img {
+        height: 120px; /* Smaller height for mobile */
+    }
+}
+/* Category Images */
+.category img {
+    width: 100%; /* Make the image fill the container */
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    border-radius: 10px; /* Match the container's border radius */
+    margin-bottom: 15px; /* Add spacing below the image */
+}
+
+.category h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+a{
+    color:white;
+    text-decoration: none;
+    color: inherit;
+}
+.category p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.category-btn {
+    background-color: #6a0dad;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.category-btn:hover {
+    background-color: #8e44ad;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background: linear-gradient(90deg, #6a0dad, #8e44ad);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://cdn.prod.website-files.com/64a91aff0460ecc653fe8cb9/665762dd76b4fbdcb382c92d_The%20Rise%20of%20Web%20Novels.webp');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    border-radius: 10px;
+}
+
+.newsletter-content {
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.newsletter-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    padding: 15px;
+    width: 60%;
+    max-width: 500px;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.2rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-form input:focus {
+    border-color: #00c6ff;
+}
+
+.newsletter-form button {
+    padding: 15px 30px;
+    background-color: #6a0dad;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.newsletter-form button:hover {
+    background-color: #8e44ad;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

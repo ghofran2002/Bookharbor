@@ -1,0 +1,146 @@
+/* admin.css */
+
+/* Global Styles */
+body {
+    background: #0a0a0a; /* Dark background */
+    color: white; /* White text */
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+h1, h2 {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Form Styles */
+#addBookForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#addBookForm input, #addBookForm textarea {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+#addBookForm input::placeholder, #addBookForm textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#addBookForm input:focus, #addBookForm textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+#addBookForm button {
+    padding: 10px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addBookForm button:hover {
+    background-color: #8e44ad;
+}
+
+/* Table Styles */
+#bookTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#bookTable th, #bookTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#bookTable th {
+    background-color: rgba(255, 255, 255, 0.05);
+    font-weight: 700;
+}
+
+#bookTable tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Action Buttons */
+.action-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-button.edit {
+    background-color: #3498db;
+    color: white;
+}
+
+.action-button.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.action-button:hover {
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #addBookForm {
+        padding: 15px;
+    }
+
+    #bookTable th, #bookTable td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #addBookForm {
+        padding: 10px;
+    }
+
+    #bookTable th, #bookTable td {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="animated-background">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+    <h1 id="pageTitle">Book Management System</h1>
+
+    <h2>Add New Book</h2>
+    <form id="addBookForm">
+        <input type="text" id="title" name="title" placeholder="Title" required>
+        <input type="text" id="author" name="author" placeholder="Author" required>
+        <input type="text" id="isbn" name="isbn" placeholder="ISBN">
+        <input type="number" id="publicationYear" name="publicationYear" placeholder="Publication Year">
+        <input type="text" id="genre" name="genre" placeholder="Genre" required>
+        <textarea id="description" name="description" placeholder="Description" required></textarea>
+        <input type="number" id="price" name="price" step="0.01" placeholder="Price" required>
+        <input type="number" id="stockQuantity" name="stockQuantity" placeholder="Stock Quantity">
+        <button type="submit">Add Book</button>
+    </form>
+
+    <h2>Book List</h2>
+    <table id="bookTable">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Publication Year</th>
+                <th>Genre</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Book rows will be inserted here by JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="admin.js"></script>
+</body>
+</html>
