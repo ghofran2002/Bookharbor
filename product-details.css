@@ -1,286 +1,320 @@
-.product-details {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    font-family: 'Inter', sans-serif;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(20px); /* Blur effect */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
-}
 
-.product-image {
-    flex: 1 1 400px;
-    max-width: 600px;
-    text-align: center;
-}
+        /* Base Styles */
+        body {
+            font-family: "Inter", sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a; /* Dark background */
+            position: relative;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
 
-.product-image img {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        /* Header Styles */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            backdrop-filter: blur(20px); /* Blur effect */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
 
-.product-info {
-    flex: 1 1 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+            position: relative;
+            z-index: 2; /* Ensure it's above the background */
+        }
 
-.product-info h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: white;
-}
+        /* Animated Background */
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Ensure it's behind the content */
+            overflow: hidden;
+        }
 
-.product-info #productAuthor {
-    font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.7); /* Light text */
-    font-style: italic;
-}
+        /* Gradient Spheres */
+        .gradient-sphere {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.5;
+            animation: moveSphere 20s infinite ease-in-out;
+        }
 
-.product-info .price {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #4caf50; /* Green price */
-    margin-bottom: 20px;
-}
+        .sphere-1 {
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(45deg, #ff3366, #ff6b3d);
+            top: -300px;
+            left: -300px;
+            animation-delay: -5s;
+        }
 
-.product-info .description {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.7); /* Light text */
-    margin-bottom: 20px;
-}
+        .sphere-2 {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(45deg, #4433ff, #3dceff);
+            bottom: -250px;
+            right: -250px;
+            animation-delay: -2s;
+        }
 
-.quantity {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
+        .sphere-3 {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(45deg, #7400ff, #ff00d4);
+            top: 50%;
+            left: 30%;
+            animation-delay: -8s;
+        }
 
-.quantity button {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border: none;
-    color: white;
-    font-size: 1.2em;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
+        /* Particles Animation */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Ensure particles are above the gradient spheres */
+        }
 
-.quantity button:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
-}
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: floatParticle 8s infinite linear;
+        }
 
-.quantity span {
-    font-size: 1.2em;
-    margin: 0 15px;
-    color: white;
-}
+        /* Keyframes for Animations */
+        @keyframes moveSphere {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            25% {
+                transform: translate(100px, 50px) rotate(90deg) scale(1.1);
+            }
+            50% {
+                transform: translate(50px, 100px) rotate(180deg) scale(1);
+            }
+            75% {
+                transform: translate(-50px, 50px) rotate(270deg) scale(0.9);
+            }
+        }
 
-.add-to-cart {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) scale(1);
+                opacity: 0;
+            }
+        }
 
-.add-to-cart:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
-}
+        /* Product Detail Styles */
+        .product-detail {
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 2;
+        }
 
-.return-to-products {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+        @media (min-width: 768px) {
+            .product-detail {
+                flex-direction: row;
+                gap: 40px;
+            }
+        }
 
-.return-to-products:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
-}
+        .product-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
 
-@media (max-width: 768px) {
-    .product-details {
-        flex-direction: column;
-    }
+        .product-image img {
+            max-width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
 
-    .product-image {
-        max-width: 100%;
-    }
-}
-/* product-details.css (updated) */
+        .product-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
-.product-details {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    font-family: 'Inter', sans-serif;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    backdrop-filter: blur(20px); /* Blur effect */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: white;
-    position: relative;
-    z-index: 2; /* Ensure content is above the background */
-}
+        .product-title {
+            font-size: 2.5em;
+            margin: 0;
+            color: white;
+        }
 
-.product-image {
-    flex: 1 1 400px;
-    max-width: 600px;
-    text-align: center;
-}
+        .product-author {
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0;
+        }
 
-.product-image img {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        .product-price {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4ade80;
+            margin: 10px 0;
+        }
 
-.product-info {
-    flex: 1 1 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+        .product-description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
 
-.product-info h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: white;
-}
+        .product-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-.product-info #productAuthor {
-    font-size: 1.2em;
-    color: rgba(255, 255, 255, 0.7); /* Light text */
-    font-style: italic;
-}
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-.product-info .price {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #4caf50; /* Green price */
-    margin-bottom: 20px;
-}
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
 
-.product-info .description {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.7); /* Light text */
-    margin-bottom: 20px;
-}
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
 
-.quantity {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
 
-.quantity button {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border: none;
-    color: white;
-    font-size: 1.2em;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-}
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-.quantity button:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
-}
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+            transition: color 0.3s ease;
+        }
 
-.quantity span {
-    font-size: 1.2em;
-    margin: 0 15px;
-    color: white;
-}
+        .back-link:hover {
+            color: #ff7f7f;
+        }
 
-.add-to-cart {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+        .product-details-section {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-.add-to-cart:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
-}
+        .details-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: white;
+        }
 
-.return-to-products {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border: none;
-    color: white;
-    padding: 12px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+        .details-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.return-to-products:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Lighter on hover */
-}
+        .details-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-@media (max-width: 768px) {
-    .product-details {
-        flex-direction: column;
-    }
+        .details-list li:last-child {
+            border-bottom: none;
+        }
 
-    .product-image {
-        max-width: 100%;
-    }
-}
+        .detail-label {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .detail-value {
+            color: white;
+            font-weight: bold;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .quantity-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .quantity-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            min-width: 30px;
+            text-align: center;
+        }

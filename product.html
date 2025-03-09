@@ -3,23 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books - BOOKHARBOR</title>
-    <link rel="stylesheet" href="product.css">
+    <title>Our Books</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="product.css">
 </head>
 <body>
-    <<div class="animated-background">
+    
+    
+    <h1>Our Books</h1>
+
+    <div class="animated-background">
         <div class="gradient-sphere sphere-1"></div>
         <div class="gradient-sphere sphere-2"></div>
         <div class="gradient-sphere sphere-3"></div>
         <div class="particles" id="particles"></div>
     </div>
-    <section class="product-page">
-        <h1>Our Books</h1>
-        <div id="productCategories"></div>
+
+    <section id="fiction" class="books-section">
+        <h2>Fiction</h2>
+        <div class="books-grid">
+            <!-- Product 1 -->
+            <div class="book">
+                <img src="https://whitmorerarebooks.cdn.bibliopolis.com/pictures/1542.jpg?auto=webp&v=1452577731" alt="To Kill a Mockingbird">
+                <h3>To Kill a Mockingbird</h3>
+                <p><strong>Author:</strong> Harper Lee</p>
+                <div class="price">$14.99</div>
+                <button onclick="addToCart(1, 'To Kill a Mockingbird', 14.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=1">View Details</a></button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="book">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1649161732i/32773948._SY540_.jpg" alt="Dune">
+                <h3>Dune</h3>
+                <p><strong>Author:</strong> Frank Herbert</p>
+                <div class="price">$18.99</div>
+                <button onclick="addToCart(2, 'Dune', 18.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=2">View Details</a></button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="book">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1546071216l/5907.jpg" alt="The Hobbit">
+                <h3>The Hobbit</h3>
+                <p><strong>Author:</strong> J.R.R. Tolkien</p>
+                <div class="price">$12.99</div>
+                <button onclick="addToCart(3, 'The Hobbit', 12.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=3">View Details</a></button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1622820586i/34594249.jpg" alt="The Girl with the Dragon Tattoo">
+                <h3>The Girl with the Dragon Tattoo</h3>
+                <p><strong>Author:</strong> Stieg Larsson</p>
+                <div class="price">$16.99</div>
+                <button onclick="addToCart(4, 'The Girl with the Dragon Tattoo', 16.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=4">View Details</a></button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="book">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCYVMBXDOXKabnDY38Q2nl2ABd6PCn8CR6Kg&s" alt="The Shining">
+                <h3>The Shining</h3>
+                <p><strong>Author:</strong> Stephen King</p>
+                <div class="price">$15.99</div>
+                <button onclick="addToCart(5, 'The Shining', 15.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=5">View Details</a></button>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/81Scutrtj4L._UF1000,1000_QL80_.jpg" alt="Pride and Prejudice">
+                <h3>Pride and Prejudice</h3>
+                <p><strong>Author:</strong> Jane Austen</p>
+                <div class="price">$10.99</div>
+                <button onclick="addToCart(6, 'Pride and Prejudice', 10.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=6">View Details</a></button>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/914cHl9v7oL._AC_UF1000,1000_QL80_.jpg" alt="The Book Thief">
+                <h3>The Book Thief</h3>
+                <p><strong>Author:</strong> Markus Zusak</p>
+                <div class="price">$13.99</div>
+                <button onclick="addToCart(7, 'The Book Thief', 13.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=7">View Details</a></button>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/71WQQjgEhQL.jpg" alt="One Hundred Years of Solitude">
+                <h3>One Hundred Years of Solitude</h3>
+                <p><strong>Author:</strong> Gabriel García Márquez</p>
+                <div class="price">$17.99</div>
+                <button onclick="addToCart(8, 'One Hundred Years of Solitude', 17.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=8">View Details</a></button>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="book">
+                <img src="https://cdn.kobo.com/book-images/55abfdd4-7e21-4496-a70c-19bca8892bb3/1200/1200/False/NCQNg-qQAT-Z7_F0SBWzjw.jpg" alt="1984">
+                <h3>1984</h3>
+                <p><strong>Author:</strong> George Orwell</p>
+                <div class="price">$11.99</div>
+                <button onclick="addToCart(9, '1984', 11.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=9">View Details</a></button>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="book">
+                <img src="https://cdn2.penguin.com.au/covers/400/9780241733790.jpg" alt="Treasure Island">
+                <h3>Treasure Island</h3>
+                <p><strong>Author:</strong> Robert Louis Stevenson</p>
+                <div class="price">$9.99</div>
+                <button onclick="addToCart(10, 'Treasure Island', 9.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=10">View Details</a></button>
+            </div>
+        </div>
     </section>
 
+    <section id="non-fiction" class="books-section">
+        <h2>Non-Fiction</h2>
+        <div class="books-grid">
+            <!-- Product 11 -->
+            <div class="book">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1560816565i/48855.jpg" alt="The Diary of a Young Girl">
+                <h3>The Diary of a Young Girl</h3>
+                <p><strong>Author:</strong> Anne Frank</p>
+                <div class="price">$12.99</div>
+                <button onclick="addToCart(11, 'The Diary of a Young Girl', 12.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=11">View Details</a></button>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="book">
+                <img src="https://target.scene7.com/is/image/Target/GUEST_0035cc74-7206-485d-aa04-83b3b7cf8db7?wid=800&hei=800&qlt=80&fmt=webp" alt="Atomic Habits">
+                <h3>Atomic Habits</h3>
+                <p><strong>Author:</strong> James Clear</p>
+                <div class="price">$19.99</div>
+                <button onclick="addToCart(12, 'Atomic Habits', 19.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=12">View Details</a></button>
+            </div>
+
+            <!-- Product 13 -->
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/713jIoMO3UL._AC_UF894,1000_QL80_.jpg" alt="Sapiens: A Brief History of Humankind">
+                <h3>Sapiens: A Brief History of Humankind</h3>
+                <p><strong>Author:</strong> Yuval Noah Harari</p>
+                <div class="price">$20.99</div>
+                <button onclick="addToCart(13, 'Sapiens: A Brief History of Humankind', 20.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=13">View Details</a></button>
+            </div>
+
+            <!-- Product 14 -->
+            <div class="book">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjWKiMog3eF2GocsQG6hgBKQIXW19FGvuCmw&s" alt="A Brief History of Time">
+                <h3>A Brief History of Time</h3>
+                <p><strong>Author:</strong> Stephen Hawking</p>
+                <div class="price">$18.99</div>
+                <button onclick="addToCart(14, 'A Brief History of Time', 18.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=14">View Details</a></button>
+            </div>
+
+            <!-- Product 15 -->
+            <div class="book">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTteBgP50LLVx7AJ9Uv90e6IZ_X5TB6cCdECw&s" alt="Meditations">
+                <h3>Meditations</h3>
+                <p><strong>Author:</strong> Marcus Aurelius</p>
+                <div class="price">$14.99</div>
+                <button onclick="addToCart(15, 'Meditations', 14.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=15">View Details</a></button>
+            </div>
+
+            <!-- Product 16 -->
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/81N9xAIkohL.jpg" alt="Rich Dad Poor Dad">
+                <h3>Rich Dad Poor Dad</h3>
+                <p><strong>Author:</strong> Robert Kiyosaki</p>
+                <div class="price">$15.99</div>
+                <button onclick="addToCart(16, 'Rich Dad Poor Dad', 15.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=16">View Details</a></button>
+            </div>
+
+            <!-- Product 17 -->
+            <div class="book">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6U323KzK6It-C5NVp3Bzse2DugcKPzpRLXA&s" alt="The Art of War">
+                <h3>The Art of War</h3>
+                <p><strong>Author:</strong> Sun Tzu</p>
+                <div class="price">$10.99</div>
+                <button onclick="addToCart(17, 'The Art of War', 10.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=17">View Details</a></button>
+            </div>
+
+            <!-- Product 18 -->
+            <div class="book">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl8KhnCEduAo2ob1wy9kWpncJYjOV1z81ECg&s" alt="In Cold Blood">
+                <h3>In Cold Blood</h3>
+                <p><strong>Author:</strong> Truman Capote</p>
+                <div class="price">$17.99</div>
+                <button onclick="addToCart(18, 'In Cold Blood', 17.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=18">View Details</a></button>
+            </div>
+
+            <!-- Product 19 -->
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/61PvTGTRS2L.jpg" alt="The 4-Hour Body">
+                <h3>The 4-Hour Body</h3>
+                <p><strong>Author:</strong> Tim Ferriss</p>
+                <div class="price">$21.99</div>
+                <button onclick="addToCart(19, 'The 4-Hour Body', 21.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=19">View Details</a></button>
+            </div>
+
+            <!-- Product 20 -->
+            <div class="book">
+                <img src="https://m.media-amazon.com/images/I/819Pl1nP0ZL.jpg" alt="Man's Search for Meaning">
+                <h3>Man's Search for Meaning</h3>
+                <p><strong>Author:</strong> Viktor E. Frankl</p>
+                <div class="price">$13.99</div>
+                <button onclick="addToCart(20, 'Man\'s Search for Meaning', 13.99)">Add to Cart</button>
+                <button><a href="product-detail.html?id=20">View Details</a></button>
+            </div>
+        </div>
+    </section>
+
+    
     <script src="product.js"></script>
 </body>
 </html>
+

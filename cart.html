@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart - BOOKHARBOR</title>
+    <title>Your Cart - Our Books</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="cart.css">
 </head>
 <body>
@@ -14,33 +15,25 @@
         <div class="particles" id="particles"></div>
     </div>
 
-    <div class="cart-container">
-        <div class="empty-cart" id="emptyCart" style="display: none;">
-            Your cart is empty.
-        </div>
-
-        <div class="cart-items" id="cartItems">
-            <!-- Cart items will be dynamically inserted here -->
-        </div>
-
-        <div class="cart-summary">
-            <p>Total Items: <span id="totalItems">0</span></p>
-            <p>Total Price: <span id="totalPrice">$0.00</span></p>
-            <button class="checkout">Proceed to Checkout</button>
-            <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
-        </div>
+    
+    <h1>Your Shopping Cart</h1>
+    
+    <div class="cart-container" id="cart-container">
+        <!-- Cart content will be inserted here by JavaScript -->
     </div>
-
+    
+    <div class="actions">
+        <a href="product.html" class="back-link"><button class="continue">← Continue Shopping</button></a>
+        <button class="checkout" onclick="buyItems()">Buy</button>
+    </div>
     <div class="contact-info">
         <label for="address">Address:</label>
-        <input type="text" id="address" placeholder="Enter your address" />
+        <input type="text" id="address" placeholder="Enter your address" required />
 
         <label for="phone">Phone:</label>
-        <input type="text" id="phone" placeholder="Enter your phone number" />
+        <input type="text" id="phone" placeholder="Enter your phone number" required />
 
-        <button class="buy" onclick="buyItems()">Buy</button>
     </div>
-
     <script src="cart.js"></script>
 </body>
 </html>
